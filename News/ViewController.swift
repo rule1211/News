@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-
+    
 }
 
 //MARK: - TableView
@@ -34,4 +34,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = categories[indexPath.row]
         return (cell)
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark
+        {
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+        }
+        else
+        {
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+            
+        }
+    }
 }
+
