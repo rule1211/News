@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let categories = ["business", "entertainment", "general", "health", "science", "sports", "technology"]
+    let categories = ["all", "business", "entertainment", "general", "health", "science", "sports", "technology"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
