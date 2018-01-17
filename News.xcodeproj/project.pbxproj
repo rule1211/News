@@ -18,9 +18,8 @@
 		BD2A7E8A200F588900297D8A /* NewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2A7E89200F588900297D8A /* NewsUITests.swift */; };
 		BD916478200F5BE0009CE074 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD916479200F5BE0009CE074 /* Alamofire.framework */; };
 		BD91647D200F8A8D009CE074 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91647C200F8A8D009CE074 /* ApiCall.swift */; };
-		BD91647F200F8B98009CE074 /* NewsSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91647E200F8B98009CE074 /* NewsSources.swift */; };
-		BD916481200F8F1E009CE074 /* NewsStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD916480200F8F1E009CE074 /* NewsStatus.swift */; };
-		BD916483200F8FE2009CE074 /* NewsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD916482200F8FE2009CE074 /* NewsError.swift */; };
+		BD91647F200F8B98009CE074 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91647E200F8B98009CE074 /* Source.swift */; };
+		BD91648A200FE103009CE074 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD916489200FE103009CE074 /* CategoryTableViewCell.swift */; };
 		BF04D9E9D8D46EF7408943FE /* Pods_NewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D2D3E33E4A95BF187659F9 /* Pods_NewsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,9 +64,8 @@
 		BD2A7E8B200F588900297D8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD916479200F5BE0009CE074 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD91647C200F8A8D009CE074 /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
-		BD91647E200F8B98009CE074 /* NewsSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSources.swift; sourceTree = "<group>"; };
-		BD916480200F8F1E009CE074 /* NewsStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsStatus.swift; sourceTree = "<group>"; };
-		BD916482200F8FE2009CE074 /* NewsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsError.swift; sourceTree = "<group>"; };
+		BD91647E200F8B98009CE074 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		BD916489200FE103009CE074 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		CCFED29BE72A3FBBA002F095 /* Pods_NewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -170,9 +168,7 @@
 		BD916484200F9036009CE074 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BD91647E200F8B98009CE074 /* NewsSources.swift */,
-				BD916480200F8F1E009CE074 /* NewsStatus.swift */,
-				BD916482200F8FE2009CE074 /* NewsError.swift */,
+				BD91647E200F8B98009CE074 /* Source.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				BD2A7E6B200F588900297D8A /* ViewController.swift */,
+				BD916489200FE103009CE074 /* CategoryTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -514,10 +511,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD916481200F8F1E009CE074 /* NewsStatus.swift in Sources */,
-				BD916483200F8FE2009CE074 /* NewsError.swift in Sources */,
 				BD2A7E6C200F588900297D8A /* ViewController.swift in Sources */,
-				BD91647F200F8B98009CE074 /* NewsSources.swift in Sources */,
+				BD91647F200F8B98009CE074 /* Source.swift in Sources */,
+				BD91648A200FE103009CE074 /* CategoryTableViewCell.swift in Sources */,
 				BD91647D200F8A8D009CE074 /* ApiCall.swift in Sources */,
 				BD2A7E6A200F588900297D8A /* AppDelegate.swift in Sources */,
 			);

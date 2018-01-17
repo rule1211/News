@@ -13,12 +13,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let categories = ["all", "business", "entertainment", "general", "health", "science", "sports", "technology"]
+    let categories = ["All", "Business", "Entertainment", "General", "Health", "Science", "Sports", "Technology"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+
     }
     
 }
@@ -31,20 +30,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = categories[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CategoryTableViewCell
+        cell.categoryNameLabel.text = categories[indexPath.row]
+        cell.categoryNameLabel.backgroundColor = .white
+        cell.backgroundColor = .clear
         return (cell)
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark
-        {
-            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
-        }
-        else
-        {
-            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
-            
-        }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

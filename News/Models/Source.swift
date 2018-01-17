@@ -1,5 +1,5 @@
 //
-//  NewsSources.swift
+//  Sources.swift
 //  News
 //
 //  Created by Stefan Ruzic on 17.1.18..

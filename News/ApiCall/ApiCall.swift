@@ -9,11 +9,9 @@
 import Foundation
 import Alamofire
 
-class Apicall {
+class ApiManager {
     
-    
-    let baseUrl = "https://newsapi.org/v2/sources?apiKey="
-    let APIKey = "d2a91ac4e0594461b27ba5927d45fa55"
-    static let sharedInstance = Apicall()
+    private static let baseUrl = "https://newsapi.org/v2/sources?apiKey="
+    private static let APIKey = "d2a91ac4e0594461b27ba5927d45fa55"
 
 }
