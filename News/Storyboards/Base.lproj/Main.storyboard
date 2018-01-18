@@ -22,13 +22,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqw-eA-rnR">
-                                <rect key="frame" x="115" y="64" width="144.5" height="21"/>
+                                <rect key="frame" x="115" y="84" width="144.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7f0-x3-W26">
-                                <rect key="frame" x="0.0" y="85" width="375" height="582"/>
+                                <rect key="frame" x="0.0" y="105" width="375" height="562"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="nsc-vA-uYO" customClass="CategoryTableViewCell" customModule="News" customModuleProvider="target">
@@ -70,7 +70,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5g9-R6-3FM" secondAttribute="bottom" id="4vW-tj-FWG"/>
                             <constraint firstItem="dqw-eA-rnR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="II1-iq-8hd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7f0-x3-W26" secondAttribute="bottom" id="OMc-Jb-LsJ"/>
-                            <constraint firstItem="dqw-eA-rnR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qjn-H9-MOB"/>
+                            <constraint firstItem="dqw-eA-rnR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Qjn-H9-MOB"/>
                             <constraint firstItem="7f0-x3-W26" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XCN-QZ-XvN"/>
                             <constraint firstItem="5g9-R6-3FM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="br9-uT-dHp"/>
                             <constraint firstItem="5g9-R6-3FM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="d5I-np-pKs"/>
@@ -87,20 +87,49 @@
             </objects>
             <point key="canvasLocation" x="479.19999999999999" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--Choose News-->
         <scene sceneID="4Uz-aK-Whm">
             <objects>
-                <viewController id="pug-6b-Gdz" sceneMemberID="viewController">
+                <viewController title="Choose News" id="pug-6b-Gdz" customClass="ChooseNewsViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9JP-db-Tkt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L9S-Z4-tWR">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hZn-mm-aGE">
+                                    <size key="itemSize" width="132" height="125"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CVcell" id="YlO-Le-gJt" customClass="ChooseNewsCollectionViewCell" customModule="News" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="132" height="125"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z6Y-q6-uj2" firstAttribute="trailing" secondItem="L9S-Z4-tWR" secondAttribute="trailing" id="4jq-EW-pWt"/>
+                            <constraint firstItem="L9S-Z4-tWR" firstAttribute="leading" secondItem="z6Y-q6-uj2" secondAttribute="leading" id="k7c-2c-agL"/>
+                            <constraint firstItem="z6Y-q6-uj2" firstAttribute="bottom" secondItem="L9S-Z4-tWR" secondAttribute="bottom" id="rJ9-qh-bDV"/>
+                            <constraint firstItem="L9S-Z4-tWR" firstAttribute="top" secondItem="z6Y-q6-uj2" secondAttribute="top" id="vbu-la-Xot"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="z6Y-q6-uj2"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZS-jl-O7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1294" y="133"/>
+            <point key="canvasLocation" x="1293.5999999999999" y="132.68365817091455"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LpQ-4m-Dxb">

@@ -15,11 +15,42 @@ class ViewController: UIViewController {
     
     let categories = ["All", "Business", "Entertainment", "General", "Health", "Science", "Sports", "Technology"]
     
+    
+    //prvo ide init
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(#function)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#function)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(#function)
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print(#function)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print(#function)
+        
+    }
+    
+    deinit {
+        
+    }
 }
 
 //MARK: - TableView
