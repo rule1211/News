@@ -31,8 +31,6 @@ extension ChooseNewsViewController: UICollectionViewDataSource, UICollectionView
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CVcell", for: indexPath as IndexPath) as! ChooseNewsCollectionViewCell
         
-        cell.backgroundColor = UIColor.cyan // make cell more visible in our example project
-        
         return cell
     }
     
